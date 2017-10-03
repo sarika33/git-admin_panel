@@ -1,45 +1,45 @@
 <?php include_once('header.php'); ?>
-		<div class="breadcrumbs">
-			<div class="container">
-				<h1 class="pull-left">Blog </h1>
-			</div>
-		</div>
-				 <?php 
-	$max_loop=4;
-	$count = 0;
-	  foreach ($records as $record):
-	  ?>
-		<div class="container content">
-			<ul class="timeline-v1">
+<div class="breadcrumbs">
+	<div class="container">
+		<h1 class="pull-left">Blog </h1>
+	</div>
+</div>
+<?php 
+$max_loop=4;
+$count = 0;
+foreach ($records as $record):
+	?>
+<div class="container content">
+	<ul class="timeline-v1">
 
-			<div class="row margin-bottom-20">
-	 
-				<li>
-					<div class="timeline-badge primary"><i class="glyphicon glyphicon-record"></i></div>
-					<div class="timeline-panel">
-						<div class="timeline-heading">
-							<img class="img-responsive" src="<?php echo base_url().'./uploads/'.$record->image ?>" alt="1"/>
-						</div>
-						<div class="timeline-body text-justify">
-							<h2 class="font-light"><a href="#"><?php  $record->blog_name?></a></h2>
-							<p><?php echo $record->description ?></p>
-							<a class="btn-u btn-u-sm" href="#">Read More</a>
-						</div>
-						<div class="timeline-footer">
-							<ul class="list-unstyled list-inline blog-info">
-								<li><i class="fa fa-clock-o"></i> March 28, 2014</li>
-								<li><i class="fa fa-comments-o"></i> <a href="#">7 Comments</a></li>
-							</ul>
-							<a class="likes" href="#"><i class="fa fa-heart"></i>239</a>
-						</div>
+		<div class="row margin-bottom-20">
+
+			<li>
+				<div class="timeline-badge primary"><i class="glyphicon glyphicon-record"></i></div>
+				<div class="timeline-panel">
+					<div class="timeline-heading">
+						<img class="img-responsive" src="<?php echo base_url().'./uploads/'.$record->image ?>" alt="1"/>
 					</div>
-				</li>
-				 <?php
-		  $count++;
-       if($count==$max_loop) break;
-		  endforeach; 
-		 ?>
-				<!-- <li class="timeline-inverted">
+					<div class="timeline-body text-justify">
+						<h2 class="font-light"><a href="#"><?php  $record->blog_name?></a></h2>
+						<p><?php echo $record->description ?></p>
+						<a class="btn-u btn-u-sm" href="#">Read More</a>
+					</div>
+					<div class="timeline-footer">
+						<ul class="list-unstyled list-inline blog-info">
+							<li><i class="fa fa-clock-o"></i> March 28, 2014</li>
+							<li><i class="fa fa-comments-o"></i> <a href="#">7 Comments</a></li>
+						</ul>
+						<a class="likes" href="#"><i class="fa fa-heart"></i>239</a>
+					</div>
+				</div>
+			</li>
+			<?php
+			$count++;
+			if($count==$max_loop) break;
+			endforeach; 
+			?>
+				 <li class="timeline-inverted">
 					<div class="timeline-badge primary"><i class="glyphicon glyphicon-record invert"></i></div>
 					<div class="timeline-panel">
 						<div class="timeline-heading">
@@ -58,8 +58,8 @@
 							<a class="likes" href="#"><i class="fa fa-heart"></i>87</a>
 						</div>
 					</div>
-				</li> -->
-			<!-- 	<li>
+				</li> 
+				<li>
 					<div class="timeline-badge primarya"><i class="glyphicon glyphicon-record"></i></div>
 					<div class="timeline-panel">
 						<div class="timeline-heading">
@@ -108,8 +108,8 @@
 							<a class="likes" href="#"><i class="fa fa-heart"></i>121</a>
 						</div>
 					</div>
-				</li> -->
-		<!-- 		<li class="timeline-inverted">
+				</li> 
+				<li class="timeline-inverted">
 					<div class="timeline-badge primary"><i class="glyphicon glyphicon-record"></i></div>
 					<div class="timeline-panel">
 						<div class="timeline-heading">
@@ -128,8 +128,8 @@
 							<a class="likes" href="#"><i class="fa fa-heart"></i>34</a>
 						</div>
 					</div>
-				</li> -->
-			<!-- 	<li>
+				</li> 
+			 	<li>
 					<div class="timeline-badge primary"><i class="glyphicon glyphicon-record invert"></i></div>
 					<div class="timeline-panel">
 						<div class="timeline-heading">
@@ -148,8 +148,8 @@
 							<a class="likes" href="#"><i class="fa fa-heart"></i>355</a>
 						</div>
 					</div>
-				</li> -->
-		<!-- 		<li class="timeline-inverted">
+				</li> 
+				<li class="timeline-inverted">
 					<div class="timeline-badge primary"><i class="glyphicon glyphicon-record invert"></i></div>
 					<div class="timeline-panel">
 						<div class="timeline-heading">
@@ -170,8 +170,8 @@
 							<a class="likes" href="#"><i class="fa fa-heart"></i>798</a>
 						</div>
 					</div>
-				</li> -->
+				</li> 
 				<li class="clearfix" style="float: none;"></li>
 			</ul>
 		</div>
-<?php include_once('footer.php'); ?>
+		<?php include_once('footer.php'); ?>

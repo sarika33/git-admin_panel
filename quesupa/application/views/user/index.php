@@ -54,11 +54,12 @@
 					<div class="overflow-hidden">
 						<img class="img-responsive" src="<?php echo base_url().'./uploads/'.$record->image ?>" width="800" height="405" alt="Not Uploades">
 					</div>
-					<a class="btn-more hover-effect" href="#">read more +</a>
+					<?= anchor("services1/{$record->s_id}",'read more +',['class'=>'btn-more hover-effect']); ?>
+					<!-- <a class="btn-more hover-effect" href="admin/viewService">read more +</a> -->
 				</div>
 				<div class="caption">
-					<h3><a class="hover-effect" href="#"><?php  $record->service_name?></a></h3>
-					<p><?php echo $record->description ?></p>
+					<h3><a class="hover-effect" href="#"><?php echo $record->service_name?></a></h3>
+					<p><?php echo $record->s_description ?></p>
 				</div>
 			</div>
 		</div>

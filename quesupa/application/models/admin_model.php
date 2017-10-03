@@ -33,7 +33,7 @@ class Admin_model extends CI_Model{
 
 	public function serviceInfo()
 	{
-		$query = $this->db->select(['s_id','service_name','description','image','status','created_on','created_by','update_by','update_on'])
+		$query = $this->db->select(['s_id','service_name','description','s_description','image','status','created_on','created_by','update_by','update_on'])
 		->get('services');
 		return $query->result();	
 	}
@@ -47,7 +47,7 @@ class Admin_model extends CI_Model{
 
 		public function blogs()
 	{
-		$query = $this->db->select(['b_id','blog_name','description','image','status','created_on','created_by','update_by','update_on'])
+		$query = $this->db->select(['b_id','blog_name','description','s_description','image','status','created_on','created_by','update_by','update_on'])
 		->get('blogs');
 		return $query->result();	
 	}

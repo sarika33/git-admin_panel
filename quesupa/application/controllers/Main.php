@@ -10,9 +10,7 @@ class Main extends CI_Controller {
 	public function home()
 	{
 	$records = $this->admin_model->serviceInfo();
-	/*echo "<pre>";
-	print_r($records);
-	exit();*/
+	
 		$this->load->view('user/index',['records'=>$records]);
 	}
 	public function about()
@@ -26,7 +24,7 @@ class Main extends CI_Controller {
 	public function blog()
 	{
 			$records = $this->admin_model->blogs();
-		$this->load->view('user/blog',['records'=>$records]);
+		$this->load->view('user/blog1',['records'=>$records]);
 	}
 	public function contact()
 	{

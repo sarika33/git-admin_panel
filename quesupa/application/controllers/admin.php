@@ -41,38 +41,8 @@ class Admin extends CI_Controller{
 
 	public function user()
 	{
-		/*$records = $this->admin_model->userInfo();*/
-		$this->load->view('admin/user');
-	}
-
-	function fetch_user(){  
-        
-           $fetch_data = $this->admin_model->userInfo();
-           $data = array();  
-           foreach($fetch_data as $row)  
-           {  
-                $sub_array = array();  
-                $sub_array[] = '<img src="'.base_url().'upload/'.$row->image.'" class="img-thumbnail" width="50" height="35" />';  
-                $sub_array[] = $row->name;  
-                $sub_array[] = $row->role;  
-                $sub_array[] = '<button type="button" name="update" id="'.$row->u_id.'" class="btn btn-warning btn-xs">Update</button>';  
-                $sub_array[] = '<button type="button" name="delete" id="'.$row->u_id.'" class="btn btn-danger btn-xs">Delete</button>';  
-                $data[] = $sub_array;  
-           }  
-           $output = array(  
-                "draw"                    =>     intval($_POST["draw"]),  
-                "recordsTotal"          =>      $this->crud_model->get_all_data(),  
-                "recordsFiltered"     =>     $this->crud_model->get_filtered_data(),  
-                "data"                    =>     $data  
-           );  
-           echo json_encode($output);  
-      }  
-	public function showAllUser()
-	{
 		$records = $this->admin_model->userInfo();
-		
-		echo json_encode($records);
-	
+		$this->load->view('admin/user',['records'=>$records]);
 	}
 
 
@@ -110,7 +80,14 @@ class Admin extends CI_Controller{
 		$service = $this->admin_model->findService($s_id);
 		$this->load->view('admin/editservice',['service'=>$service]);
 	}
+public function viewService($s_id)
+	{
+	/*	print_r($s_id);
+		exit();*/
 
+		$service = $this->admin_model->findService($s_id);
+		$this->load->view('user/service',['service'=>$service]);
+	}
 		public function editBlog($b_id)
 	{
 		$blog = $this->admin_model->findBlog($b_id);
@@ -218,9 +195,9 @@ class Admin extends CI_Controller{
 		$config = [
 		'upload_path'	=>		'./uploads/',
 		'allowed_types'	=>		'jpg|gif|png|jpeg',
-		'max_size'      =>      '10',
+		/*'max_size'      =>      '10',
 		'max_width'     =>      '300',
-		'max_height'    =>      '300',
+		'max_height'    =>      '300',*/
 		];
 		$this->load->library('upload', $config);
 
@@ -228,6 +205,7 @@ class Admin extends CI_Controller{
 		$this->form_validation->set_rules('name','name','required|trim');
 		$this->form_validation->set_rules('status','status','required');
 		$this->form_validation->set_rules('description','description','required');
+		$this->form_validation->set_rules('s_description','Short description','required');
 		$this->form_validation->set_rules('created_by','created_by','required');
 		if($this->form_validation->run() ) 
 		{
@@ -260,6 +238,7 @@ class Admin extends CI_Controller{
 						$post = array(
 							'service_name'=>$this->input->post('name'),
 							'description'=>$this->input->post('description'),
+							's_description'=>$this->input->post('s_description'),
 							'status'=>$this->input->post('status'),
 							'created_by'=>$this->input->post('created_by')
 							);
@@ -285,6 +264,7 @@ class Admin extends CI_Controller{
 					$post = array(
 						'service_name'=>$this->input->post('name'),
 						'description'=>$this->input->post('description'),
+						's_description'=>$this->input->post('s_description'),
 						'status'=>$this->input->post('status'),
 						'created_by'=>$this->input->post('created_by')
 						);
@@ -311,9 +291,9 @@ class Admin extends CI_Controller{
 		$config = [
 		'upload_path'	=>		'./uploads/',
 		'allowed_types'	=>		'jpg|gif|png|jpeg',
-		'max_size'      =>      '10',
+		/*'max_size'      =>      '10',
 		'max_width'     =>      '300',
-		'max_height'    =>      '300',
+		'max_height'    =>      '300',*/
 		];
 		$this->load->library('upload', $config);
 
@@ -321,6 +301,7 @@ class Admin extends CI_Controller{
 		$this->form_validation->set_rules('name','name','required|trim');
 		$this->form_validation->set_rules('status','status','required');
 		$this->form_validation->set_rules('description','description','required');
+		$this->form_validation->set_rules('s_description','Short description','required');
 		$this->form_validation->set_rules('created_by','created_by','required');
 		if($this->form_validation->run() ) 
 		{
@@ -353,6 +334,7 @@ class Admin extends CI_Controller{
 						$post = array(
 							'blog_name'=>$this->input->post('name'),
 							'description'=>$this->input->post('description'),
+							's_description'=>$this->input->post('s_description'),
 							'status'=>$this->input->post('status'),
 							'created_by'=>$this->input->post('created_by')
 							);
@@ -378,6 +360,7 @@ class Admin extends CI_Controller{
 					$post = array(
 						'blog_name'=>$this->input->post('name'),
 						'description'=>$this->input->post('description'),
+						's_description'=>$this->input->post('s_description'),
 						'status'=>$this->input->post('status'),
 						'created_by'=>$this->input->post('created_by')
 						);

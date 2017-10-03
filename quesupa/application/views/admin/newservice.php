@@ -23,6 +23,7 @@
 
     var error_name = false;
     var error_description = false;
+     var error_s_description = false;
     var error_status= false;
     var error_created_by = false;
 
@@ -55,7 +56,16 @@ function check_description(){
    $("#description_error_message").hide();
  }
 }
-
+function check_s_description(){
+  var s_description_length = $("#form_s_description").val().length;
+  if(s_description_length < 1) {
+   $("#s_description_error_message").html("Should Not Empty");
+   $("#s_description_error_message").show();      
+   error_s_description = true;
+ } else {
+   $("#s_description_error_message").hide();
+ }
+}
 
 function check_status(){
   var status_length = $("#form_status").val().length;
@@ -83,15 +93,17 @@ function check_created_by(){
 $("#registration_form").submit(function() {
   error_name = false;                 
   error_description = false;
+  error_s_description = false;
   error_status = false;
   error_created_by = false;
   
   check_name();                 
   check_description();
+  check_s_description();
   check_status();
   check_created_by();
 
-  if(error_name == false && error_description  == false && error_status == false  && error_created_by == false ) {
+  if(error_name == false && error_description  == false && error_s_description  == false && error_status == false  && error_created_by == false ) {
     return true;
   } else {
     return false; 
@@ -115,7 +127,7 @@ $("#registration_form").submit(function() {
     </div>
   </div>
 </nav>
-<a href="<?php echo base_url('ajax/add'); ?>" class="btn btn-primary">Add New by ajax</a>
+
 <?php if( $feedback = $this->session->flashdata('feedback')): 
   $feedback_class = $this->session->flashdata('feedback_class');
   ?>
@@ -172,6 +184,19 @@ $("#registration_form").submit(function() {
   </div>
   <div class="col-lg-6">
    <span class="error_form" id="description_error_message"></span>
+ </div>
+</div>
+ <div class="row">
+  <div class="col-lg-6">
+    <div class="form-group">
+      <label  class="col-lg-4 control-label">Short Description</label>
+      <div class="col-lg-8">
+        <?php echo form_textarea(['name'=>'s_description','class'=>'form-control','placeholder'=>'Short Description','value'=>set_value('s_description'), 'id'=>"form_s_description",'rows'=>'4','cols'=>'10']); ?>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+   <span class="error_form" id="s_description_error_message"></span>
  </div>
 </div>
 

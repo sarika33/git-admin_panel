@@ -8,23 +8,23 @@
 	<meta name="author" content="">
 	<link rel="shortcut icon" href="assets/img/logo.png">
 	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
-	<link rel="stylesheet" href="<?php echo CSS ;?>/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/style.css">
-	<link rel="stylesheet" href="assets/css/headers/header-default.css">
-	<link rel="stylesheet" href="assets/css/footers/footer-v1.css">
-	<link rel="stylesheet" href="assets/plugins/animate.css">
-	<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/plugins/parallax-slider/css/parallax-slider.css">
-	<link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
-	<link rel="stylesheet" href="assets/css/theme-colors/default.css" id="style_color">
-	<link rel="stylesheet" href="assets/css/theme-skins/dark.css">
-	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="<?php echo PLUGINS ;?>/bootstrap.min.css">
+	<link rel="stylesheet" href="<?php echo CSS ;?>/style.css">
+	<link rel="stylesheet" href="<?php echo CSS1 ;?>/header-default.css">
+	<link rel="stylesheet" href="<?php echo CSS2 ;?>/footer-v1.css">
+	<link rel="stylesheet" href="<?php echo PLUGINS1 ;?>/animate.css">
+	<link rel="stylesheet" href="<?php echo PLUGINS2 ;?>/line-icons.css">
+	<link rel="stylesheet" href="<?php echo PLUGINS3 ;?>/font-awesome.min.css">
+	<link rel="stylesheet" href="<?php echo PLUGINS4 ;?>/parallax-slider.css">
+	<link rel="stylesheet" href="<?php echo PLUGINS5 ;?>/owl.carousel.css">
+	<link rel="stylesheet" href="<?php echo CSS3 ;?>/default.css" id="style_color">
+	<link rel="stylesheet" href="<?php echo CSS4 ;?>/dark.css">
+	<link rel="stylesheet" href="<?php echo CSS ;?>/custom.css">
 
-	<link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
-	<link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+	<link rel="stylesheet" href="<?php echo PLUGINS6 ;?>/sky-forms.css">
+	<link rel="stylesheet" href="<?php echo PLUGINS7 ;?>/custom-sky-forms.css">
 	
-	<link rel="stylesheet" href="assets/css/pages/shortcode_timeline1.css">
+	<link rel="stylesheet" href="<?php echo CSS5 ;?>/shortcode_timeline1.css">
 	
 </head>
 <body>
