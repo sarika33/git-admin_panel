@@ -7,11 +7,13 @@ class Admin extends CI_Controller{
 
 	public function adminValidation()
 	{
-		$this->form_validation->set_rules('username','User name','required|trim');
+		$this->form_validation->set_rules('username','User name','required');
 		$this->form_validation->set_rules('password','Password','required');
+
 
 		if($this->form_validation->run())
 		{
+			
 			$username=$this->input->post('username');
 			$password=md5($this->input->post('password'));
 
@@ -19,12 +21,12 @@ class Admin extends CI_Controller{
 			if( $login_id)
 			{
 				$this->session->set_userdata('u_id',$login_id);
-				$this->load->view('admin/dashboard');
+				$this->load->view('panel/dashboard');
 
 			}
 			else
 			{
-				return redirect('accesstocpanel');
+				return redirect('admin_login');
 			}
 		}
 		else
@@ -99,7 +101,11 @@ public function viewService($s_id)
 		$user = $this->admin_model->findUser($u_id);
 		$this->load->view('admin/edituser',['user'=>$user]);
 	}
-
+public function dashboard()
+	{
+	
+		$this->load->view('panel/dashboard');
+	}
 	public function deleteService()
 	{
 		$s_id = $this->input->post('s_id');

@@ -3,7 +3,9 @@
 	<div class="alert alert-success" style="display: none;">
 		
 	</div>
-	<button id="btnAdd" class="btn btn-success">Add New</button>
+	<div class="col-lg-1 col-sm-3 col-xs-12">
+	<button id="btnAdd" class="btn btn-block btn-success btn-rounded">Add New</button>
+	</div>
 	<table class="table table-bordered table-responsive" style="margin-top: 20px;">
 		<thead>
 			<tr>
@@ -237,7 +239,7 @@
 						html +='<tr>'+
 									'<td>'+data[i].s_id+'</td>'+
 									'<td>'+data[i].service_name+'</td>'+
-									'<td>'+data[i].description+'</td>'+
+									'<td>'+data[i].s_description+'</td>'+
 									'<td>'+data[i].status+'</td>'+
 									'<td>'+data[i].created_by+'</td>'+
 									'<td>'+
