@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="asset/plugins/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="asset/plugins/images/logo1.gif">
     <title>Admin-Dashboard</title>
     <link href="asset/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="asset/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">

@@ -9,7 +9,7 @@
 	<table class="table table-bordered table-responsive" style="margin-top: 20px;">
 		<thead>
 			<tr>
-				<td width="1%" >ID</td>
+				<td width="2%" >Sr. No</td>
 				<td width="10%">Service Name</td>
 				<td width="10%">Description</td>
 				<td width="2%">Status</td>
@@ -54,7 +54,10 @@
         		<div class="form-group">
         			<label for="status" class="label-control col-md-4">Status</label>
         			<div class="col-md-8">
-        				<input type="text" name="txtStatus" class="form-control">
+        			     <select name="txtStatus" class="form-control">
+          <option value="1">Active</option>
+          <option value="0">Inactive</option>
+        </select>			
         			</div>
         		</div>
         		<div class="form-group">
@@ -261,9 +264,11 @@
 					console.log(data);
 					var html = '';
 					var i;
+					var j;
 					for(i=0; i<data.length; i++){
+						j= i+1;
 						html +='<tr>'+
-									'<td>'+data[i].s_id+'</td>'+
+									'<td>'+j+'</td>'+
 									'<td>'+data[i].service_name+'</td>'+
 									'<td>'+data[i].s_description+'</td>'+
 									'<td>'+data[i].status+'</td>'+

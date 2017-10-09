@@ -50,6 +50,7 @@ class Service_m extends CI_Model{
 		$field = array(
 			'name'=>$this->input->post('txtUserName'),
 			'email'=>$this->input->post('txtEmail'),
+			'password'=>md5($this->input->post('txtPassword')),
 			'role'=>$this->input->post('txtRole'),
 			'created_by'=>$this->input->post('txtCreatedBy'),
 			'status'=>$this->input->post('txtStatus')

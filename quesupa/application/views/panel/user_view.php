@@ -9,7 +9,7 @@
 	<table class="table table-bordered table-responsive" style="margin-top: 20px;">
 		<thead>
 			<tr>
-				<td width="1%" >ID</td>
+				<td width="2%" >Sr. No</td>
 				<td width="10%">User Name</td>
 				<td width="2%">Status</td>
 				<td width="2%">Created By</td>
@@ -45,15 +45,34 @@
 						</div>
 					</div>
 					<div class="form-group">
+						<label for="name" class="label-control col-md-4">Password</label>
+						<div class="col-md-8">
+							<input type="password" name="txtPassword" class="form-control">
+						</div>
+					</div>
+						<div class="form-group">
+						<label for="name" class="label-control col-md-4">Confirm Password</label>
+						<div class="col-md-8">
+							<input type="password" name="txtCPassword" class="form-control">
+						</div>
+					</div>
+					<div class="form-group">
 						<label for="status" class="label-control col-md-4">Role</label>
 						<div class="col-md-8">
-							<input type="text" name="txtRole" class="form-control">
+									     <select name="txtRole" class="form-control">
+          <option value="0">Developer</option>
+    <option value="1">Designer</option>
+    <option value="2">BPO</option>
+        </select>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="status" class="label-control col-md-4">Status</label>
 						<div class="col-md-8">
-							<input type="text" name="txtStatus" class="form-control">
+										     <select name="txtStatus" class="form-control">
+          <option value="1">Active</option>
+          <option value="0">Inactive</option>
+        </select>
 						</div>
 					</div>
 					<div class="form-group">
@@ -124,6 +143,8 @@
 			//validate form
 			var userName = $('input[name=txtUserName]');
 			var email = $('input[name=txtEmail]');
+			var password = $('input[name=txtPassword]');
+			var cpassword = $('input[name=txtCPassword]');
 			var status = $('input[name=txtStatus]');
 			var role = $('input[name=txtRole]');
 			var createdBy = $('input[name=txtCreatedBy]');
@@ -160,8 +181,24 @@
 				role.parent().parent().removeClass('has-error');
 				result +='5';
 			}
+			if(password.val()==''){
+				password.parent().parent().addClass('has-error');
+				//The parent() method returns the direct parent element of the selected element.
+			}else{
+				password.parent().parent().removeClass('has-error');
+				result +='6';
+			}
+			if(cpassword.val()==''){
+				cpassword.parent().parent().addClass('has-error');
+				//The parent() method returns the direct parent element of the selected element.
+			}else{
+				cpassword.parent().parent().removeClass('has-error');
+				result +='7';
+			}
+			if(result=='1234567' && password.val() == cpassword.val()){
+			
 
-			if(result=='12345'){
+		
 				$.ajax({
 					type: 'ajax',
 					method: 'post',
@@ -170,6 +207,7 @@
 					async: false,
 					dataType: 'json',
 					success: function(response){
+							console.log(password);
 						if(response.success){
 							$('#myModal').modal('hide');
 							$('#myForm')[0].reset();
@@ -190,6 +228,7 @@
 					}
 				});
 			}
+			
 		});
 
 		//edit
@@ -254,6 +293,7 @@
 
 		//function
 		function showAllUser(){
+
 			$.ajax({
 				type: 'ajax',
 				url: '<?php echo base_url() ?>service/showAllUser',
@@ -263,9 +303,10 @@
 					console.log(data);
 					var html = '';
 					var i;
-					for(i=0; i<data.length; i++){
+					for(i=0; i<data.length; i++){	
+						var j= i+1;
 						html +='<tr>'+
-						'<td>'+data[i].u_id+'</td>'+
+						'<td>'+j+'</td>'+
 						'<td>'+data[i].name+'</td>'+
 						'<td>'+data[i].status+'</td>'+
 						'<td>'+data[i].created_by+'</td>'+
