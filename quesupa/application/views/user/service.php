@@ -24,15 +24,16 @@
 
 
 		<div class="row">
-			<div class="col-sm-12 md-margin-bottom-50">
+			<div class="col-md-4">
 				<img class="img-responsive" src="<?php echo base_url().'./uploads/'.$service->image ?>" alt="1"/>
-				 <div class="timeline-body text-justify">
-					<h2 class="font-light"><a href="#"><?php  $service->service_name?></a></h2>
+				</div>
+				 <div class="col-md-8">
+					<h2 class="font-light"><a href=""><?php echo $service->service_name?></a></h2>
 					<p><?php echo $service->description ?></p>
 
 				</div>
 
-			</div>
+			
 			
 		</div><!--/end row-->
 	</div>
@@ -44,31 +45,31 @@
 		<div class="owl-clients-v1">
 
 			<div class="item">
-				<img src="assets/img/clients4/1.png" alt="">
+				<img src="<?php echo SITE_URL ?> /assets/img/clients4/1.png" alt="">
 			</div>
 			<div class="item">
-				<img src="assets/img/clients4/2.png" alt="">
+				<img src="<?php echo SITE_URL ?> /assets/img/clients4/2.png" alt="">
 			</div>
 			<div class="item">
-				<img src="assets/img/clients4/3.png" alt="">
+				<img src="<?php echo SITE_URL ?> /assets/img/clients4/3.png" alt="">
 			</div>
 			<div class="item">
-				<img src="assets/img/clients4/4.png" alt="">
+				<img src="<?php echo SITE_URL ?> /assets/img/clients4/4.png" alt="">
 			</div>
 			<div class="item">
-				<img src="assets/img/clients4/5.png" alt="">
+				<img src="<?php echo SITE_URL ?> /assets/img/clients4/5.png" alt="">
 			</div>
 			<div class="item">
-				<img src="assets/img/clients4/6.png" alt="">
+				<img src="<?php echo SITE_URL ?> /assets/img/clients4/6.png" alt="">
 			</div>
 			<div class="item">
-				<img src="assets/img/clients4/7.png" alt="">
+				<img src="<?php echo SITE_URL ?> /assets/img/clients4/7.png" alt="">
 			</div>
 			<div class="item">
-				<img src="assets/img/clients4/8.png" alt="">
+				<img src="<?php echo SITE_URL ?> /assets/img/clients4/8.png" alt="">
 			</div>
 			<div class="item">
-				<img src="assets/img/clients4/9.png" alt="">
+				<img src="<?php echo SITE_URL ?> /assets/img/clients4/9.png" alt="">
 			</div>
 		</div>
 	</div>

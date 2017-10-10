@@ -3,7 +3,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-4 md-margin-bottom-40">
-								<a href="index.html"><img id="logo-footer" class="footer-logo" src="assets/img/logo 1.png" alt=""></a>
+								<a href="index.php"><img id="logo-footer" class="footer-logo" src="assets/img/logo.png" alt=""></a>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
 								<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 							</div>
@@ -17,7 +17,7 @@
 									<li><a href="contact">Contact us</a><i class="fa fa-angle-right"></i></li>
 								</ul>
 							</div>
-							<div class="col-md-3 map-img md-margin-bottom-40">
+							<div class="col-md-3  md-margin-bottom-40">
 								<div class="headline"><h2>Contact Us</h2></div>
 								<address class="md-margin-bottom-40">
 									Padma Vishwas center<br />
@@ -68,20 +68,20 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
-		<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
-		<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-		<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
-		<script type="text/javascript" src="assets/plugins/parallax-slider/js/modernizr.js"></script>
-		<script type="text/javascript" src="assets/plugins/parallax-slider/js/jquery.cslider.js"></script>
-		<script type="text/javascript" src="assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
-		<script type="text/javascript" src="assets/js/custom.js"></script>
-		<script type="text/javascript" src="assets/js/app.js"></script>
-		<script type="text/javascript" src="assets/js/plugins/owl-carousel.js"></script>
-		<script type="text/javascript" src="assets/js/plugins/style-switcher.js"></script>
-		<script type="text/javascript" src="assets/js/plugins/parallax-slider.js"></script>
-			<script type="text/javascript" src="assets/js/plugins/style-switcher.js"></script>
+		<script type="text/javascript" src="<?php echo JS ;?>/jquery.min.js"></script>
+		<script type="text/javascript" src="<?php echo SITE_URL ?>/assets/plugins/jquery/jquery-migrate.min.js"></script>
+		<script type="text/javascript" src="<?php echo SITE_URL ?>/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="<?php echo SITE_URL ?>/assets/plugins/back-to-top.js"></script>
+		<script type="text/javascript" src="<?php echo SITE_URL ?>/assets/plugins/smoothScroll.js"></script>
+		<script type="text/javascript" src="<?php echo SITE_URL ?>/assets/plugins/parallax-slider/js/modernizr.js"></script>
+		<script type="text/javascript" src="<?php echo SITE_URL ?>/assets/plugins/parallax-slider/js/jquery.cslider.js"></script>
+		<script type="text/javascript" src="<?php echo SITE_URL ?>/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+		<script type="text/javascript" src="<?php echo SITE_URL ?>/assets/js/custom.js"></script>
+		<script type="text/javascript" src="<?php echo SITE_URL ?>/assets/js/app.js"></script>
+		<script type="text/javascript" src="<?php echo SITE_URL ?>/assets/js/plugins/owl-carousel.js"></script>
+		<script type="text/javascript" src="<?php echo SITE_URL ?>/assets/js/plugins/style-switcher.js"></script>
+		<script type="text/javascript" src="<?php echo SITE_URL ?>/assets/js/plugins/parallax-slider.js"></script>
+			<script type="text/javascript" src="<?php echo SITE_URL ?>/assets/js/plugins/style-switcher.js"></script>
 		<script type="text/javascript">
 			jQuery(document).ready(function() {
 				App.init();

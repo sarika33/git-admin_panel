@@ -68,7 +68,7 @@ class Admin extends CI_Controller{
 
 	public function newUser()
 	{
-		$this->load->view('admin/newuser');
+		$this->load->view('admin/newUser1');
 	}
 
 	public function newServiceValidation()
@@ -84,11 +84,13 @@ class Admin extends CI_Controller{
 	}
 public function viewService($s_id)
 	{
-	/*	print_r($s_id);
-		exit();*/
-
 		$service = $this->admin_model->findService($s_id);
 		$this->load->view('user/service',['service'=>$service]);
+	}
+	public function viewBlog($b_id)
+	{
+		$blog = $this->admin_model->findBlog($b_id);
+		$this->load->view('user/blog',['blog'=>$blog]);
 	}
 		public function editBlog($b_id)
 	{

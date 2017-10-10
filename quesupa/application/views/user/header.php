@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<link rel="shortcut icon" href="assets/img/logo.png">
+	<link rel="shortcut icon" href="<?php echo SITE_URL ?> /assets/img/logo.png">
 	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
 	<link rel="stylesheet" href="<?php echo PLUGINS ;?>/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo CSS ;?>/style.css">
@@ -25,6 +25,7 @@
 	<link rel="stylesheet" href="<?php echo PLUGINS7 ;?>/custom-sky-forms.css">
 	
 	<link rel="stylesheet" href="<?php echo CSS5 ;?>/shortcode_timeline1.css">
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-3.1.1.min.js"></script>
 	
 </head>
 <body>
@@ -32,7 +33,7 @@
 		<div class="header">
 			<div class="container">
 				<a class="logo" href="index.html">
-					<img src="assets/img/logo1.gif" alt="Logo" style="height: 75px;">
+					<img src="<?php echo SITE_URL ?>/assets/img/logo1.gif" alt="Logo" style="height: 75px;">
 				</a>
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
 					<span class="sr-only">Toggle navigation</span>
@@ -43,12 +44,12 @@
 				<div class="container">
 					<ul class="nav navbar-nav">
 						<li>
-							<a href="home" >
+							<a href="<?php echo SITE_URL?>/home" >
 								Home
 							</a>
 						</li>
 						<li >
-							<a href="about-quesup" >
+							<a href="<?php echo SITE_URL?>/about-quesup" >
 								About Quesup
 							</a>
 						</li>
@@ -58,21 +59,21 @@
 							</a>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="services">Service1</a>
+									<a href="<?php echo SITE_URL?>/services">Service1</a>
 									
 								</li>
 								<li>
-									<a href="services">Service2</a>
+									<a href="<?php echo SITE_URL?>/services">Service2</a>
 								</li>
 							</ul>
 						</li>
 						<li >
-							<a href="blog">
+							<a href="<?php echo SITE_URL?>/blog">
 								Blog
 							</a>
 						</li>
 						<li >
-							<a href="contact">
+							<a href="<?php echo SITE_URL?>/contact">
 								Contact
 							</a>
 						</li>

@@ -84,18 +84,23 @@ defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
-define('PLUGINS','assets/plugins/bootstrap/css');
-define('PLUGINS1','assets/plugins');
-define('PLUGINS2','assets/plugins/line-icons');
-define('PLUGINS3','assets/plugins/font-awesome/css');
-define('PLUGINS4','assets/plugins/parallax-slider/css');
-define('PLUGINS5','assets/plugins/owl-carousel/owl-carousel');
-define('PLUGINS6','assets/plugins/sky-forms-pro/skyforms/css');
-define('PLUGINS7','assets/plugins/sky-forms-pro/skyforms/custom');
+define('SITE_URL','http://localhost/quesupa');
 
-define('CSS','assets/css');
-define('CSS1','assets/css/headers');
-define('CSS2','assets/css/footers');
-define('CSS3','assets/css/theme-colors');
-define('CSS4','assets/css/theme-skins');
-define('CSS5','assets/css/pages');
+define('PLUGINS',SITE_URL.'/assets/plugins/bootstrap/css');
+define('PLUGINS1',SITE_URL.'/assets/plugins');
+define('PLUGINS2',SITE_URL.'/assets/plugins/line-icons');
+define('PLUGINS3',SITE_URL.'/assets/plugins/font-awesome/css');
+define('PLUGINS4',SITE_URL.'/assets/plugins/parallax-slider/css');
+define('PLUGINS5',SITE_URL.'/assets/plugins/owl-carousel/owl-carousel');
+define('PLUGINS6',SITE_URL.'/assets/plugins/sky-forms-pro/skyforms/css');
+define('PLUGINS7',SITE_URL.'/assets/plugins/sky-forms-pro/skyforms/custom');
+
+
+define('CSS',SITE_URL.'/assets/css');
+define('CSS1',SITE_URL.'/assets/css/headers');
+define('CSS2',SITE_URL.'/assets/css/footers');
+define('CSS3',SITE_URL.'/assets/css/theme-colors');
+define('CSS4',SITE_URL.'/assets/css/theme-skins');
+define('CSS5',SITE_URL.'/assets/css/pages');
+
+define('JS',SITE_URL.'/assets/plugins/jquery');

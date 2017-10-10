@@ -9,7 +9,17 @@ class Service extends CI_Controller{
 		$this->load->view('panel/service_view');
 		$this->load->view('panel/footer');
 	}
-
+	
+public function contactForm(){
+	$result = $this->m->contactForm();
+		$msg['success'] = false;
+		$msg['type'] = 'add';
+		if($result){
+			$msg['success'] = true;
+		}
+		echo json_encode($msg);
+		
+	}
 	public function showAllService(){
 		$result = $this->m->showAllService();
 		echo json_encode($result);
@@ -20,6 +30,10 @@ class Service extends CI_Controller{
 	}
 	public function showAllBlog(){
 		$result = $this->m->showAllBlog();
+		echo json_encode($result);
+	}
+		public function showAllContact(){
+		$result = $this->m->showAllContact();
 		echo json_encode($result);
 	}
 
@@ -50,6 +64,15 @@ class Service extends CI_Controller{
 		}
 		echo json_encode($msg);
 	}
+		public function addContact(){
+		$result = $this->m->addContact();
+		$msg['success'] = false;
+		$msg['type'] = 'add';
+		if($result){
+			$msg['success'] = true;
+		}
+		echo json_encode($msg);
+	}
 	public function editService(){
 		$result = $this->m->editService();
 		echo json_encode($result);
@@ -60,6 +83,10 @@ class Service extends CI_Controller{
 	}
 	public function editBlog(){
 		$result = $this->m->editBlog();
+		echo json_encode($result);
+	}
+		public function editContact(){
+		$result = $this->m->editContact();
 		echo json_encode($result);
 	}
 
@@ -90,7 +117,15 @@ class Service extends CI_Controller{
 		}
 		echo json_encode($msg);
 	}
-
+public function updateContact(){
+		$result = $this->m->updateContact();
+		$msg['success'] = false;
+		$msg['type'] = 'update';
+		if($result){
+			$msg['success'] = true;
+		}
+		echo json_encode($msg);
+	}
 	public function deleteService(){
 		$result = $this->m->deleteService();
 		$msg['success'] = false;
@@ -115,7 +150,14 @@ class Service extends CI_Controller{
 		}
 		echo json_encode($msg);
 	}
-
+	public function deleteContact(){
+		$result = $this->m->deleteContact();
+		$msg['success'] = false;
+		if($result){
+			$msg['success'] = true;
+		}
+		echo json_encode($msg);
+	}
 
 	public function user(){
 		$this->load->view('panel/header');
@@ -126,6 +168,11 @@ class Service extends CI_Controller{
 	public function blog(){
 		$this->load->view('panel/header');
 		$this->load->view('panel/blog_view');
+		$this->load->view('panel/footer');
+	}
+	public function contact(){
+		$this->load->view('panel/header');
+		$this->load->view('panel/contact_view');
 		$this->load->view('panel/footer');
 	}
 	public function logout()

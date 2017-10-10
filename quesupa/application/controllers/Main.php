@@ -19,7 +19,8 @@ class Main extends CI_Controller {
 	}
 	public function service()
 	{
-		$this->load->view('user/service');
+			$records = $this->admin_model->serviceInfo();
+		$this->load->view('user/service1',['records'=>$records]);
 	}
 	public function blog()
 	{

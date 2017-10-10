@@ -2,6 +2,19 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Service_m extends CI_Model{
+		public function contactForm(){
+		$field = array(
+			'name'=>$this->input->post('name'),
+			'email'=>$this->input->post('email'),
+			'message'=>$this->input->post('message'),
+			);
+		$this->db->insert('contacts', $field);
+		if($this->db->affected_rows() > 0){
+			return true;
+		}else{
+			return false;
+		}
+	}
 	public function showAllService(){
 		
 		$query = $this->db->get('services');
@@ -29,7 +42,15 @@ class Service_m extends CI_Model{
 			return false;
 		}
 	}
-
+	public function showAllContact(){
+		
+		$query = $this->db->get('contacts');
+		if($query->num_rows() > 0){
+			return $query->result();
+		}else{
+			return false;
+		}
+	}
 
 		public function addService(){
 		$field = array(
@@ -77,6 +98,19 @@ class Service_m extends CI_Model{
 			return false;
 		}
 	}
+			public function addContact(){
+		$field = array(
+			'name'=>$this->input->post('txtName'),
+			'email'=>$this->input->post('txtEmail'),
+			'message'=>$this->input->post('txtMessage'),
+			);
+		$this->db->insert('contacts', $field);
+		if($this->db->affected_rows() > 0){
+			return true;
+		}else{
+			return false;
+		}
+	}
 
 	public function editService(){
 		$id = $this->input->get('id');
@@ -110,7 +144,16 @@ class Service_m extends CI_Model{
 			return false;
 		}
 	}
-
+	public function editContact(){
+		$id = $this->input->get('id');
+		$this->db->where('c_id', $id);
+		$query = $this->db->get('contacts');
+		if($query->num_rows() > 0){
+			return $query->row();
+		}else{
+			return false;
+		}
+	}
 	public function updateService(){
 		$id = $this->input->post('txtId');
 		$field = array(
@@ -165,6 +208,23 @@ class Service_m extends CI_Model{
 			return false;
 		}
 	}
+	public function updateContact(){
+		$id = $this->input->post('txtId');
+		$field = array(
+		'name'=>$this->input->post('txtName'),
+			'email'=>$this->input->post('txtEmail'),
+			'message'=>$this->input->post('txtMessage'),
+			
+		'update_on'=>date('Y-m-d H:i:s')
+		);
+		$this->db->where('c_id', $id);
+		$this->db->update('contacts', $field);
+		if($this->db->affected_rows() > 0){
+			return true;
+		}else{
+			return false;
+		}
+	}
 
 	function deleteService(){
 		$id = $this->input->get('id');
@@ -190,6 +250,17 @@ class Service_m extends CI_Model{
 		$id = $this->input->get('id');
 		$this->db->where('b_id', $id);
 		$this->db->delete('blogs');
+		if($this->db->affected_rows() > 0){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+	function deleteContact(){
+		$id = $this->input->get('id');
+		$this->db->where('c_id', $id);
+		$this->db->delete('contacts');
 		if($this->db->affected_rows() > 0){
 			return true;
 		}else{
