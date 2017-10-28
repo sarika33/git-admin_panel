@@ -53,9 +53,9 @@ public function showAllPage(){
 
 
 		public function page(){
-		$this->load->view('panel/header');
-		$this->load->view('panel/page_view');
-		$this->load->view('panel/footer');
+		$this->load->view('admin/header');
+		$this->load->view('admin/page_view');
+		$this->load->view('admin/footer');
 	}
 
 	public function logout()

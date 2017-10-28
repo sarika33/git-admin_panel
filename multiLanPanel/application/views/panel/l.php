@@ -13,7 +13,8 @@
 		    		<div id="home" class= "logo text-center">
 		    			<h1><?php echo lang('title'); ?></h1>
 		   			</div>
-		   			   <a href="english"><button type="button"><?php echo lang('translate'); ?></button></a>
+		   			   <a href="english"><button type="button">English</button>
+		   			   <a href="chinese"><button type="button">Chinese</button></a>
 			    	<div class= "row timer-circle">
 			    		<div class= "main-text text-center">
 			    			<h2 class="top-text"><?php echo lang('btitle'); ?></h2>
@@ -26,7 +27,7 @@
 							<div class= "circle text-center">
 								<div class= "row" id= "spacer1">
 									<div class= "title"></div>
-									<div class= "numbers" id= "dday"></div>
+									<div class= "numbers" id="dday"></div>
 								</div>
 								<div class= "row" id= "spacer2">
 									<div class= "title"></div>

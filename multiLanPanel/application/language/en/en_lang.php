@@ -1,0 +1,22 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['title']= 'Quesup';
+$lang['translate'] ='Translate';
+$lang['btitle'] ='Quesup Web Solutions Pvt. Ltd';
+$lang['day'] ='day';
+$lang['hr'] ='hr';
+$lang['min'] ='min';
+$lang['sec'] ='sec';
+$lang['csoon'] ='Coming Soon';
+$lang['c1'] ='Web Development ';
+$lang['c2'] ='Marketing';
+$lang['c3'] ='Services';
+$lang['subscribe'] ='Subscribe us';
+$lang['tag'] ='Welcome to our world of technology';
+$lang['tag1'] ='Our website is under construction. We`ll be here soon with our new site.';
+$lang['email'] ='Email Address';
+$lang['password'] ='Password';
+$lang['connect'] ='Stay Connected';
+$lang['tag3'] ='We want to connect people like you.';
+$lang['copyright'] ='Copyright 2017 Quesup Web Solutons Pvt.Ltd.';
+$lang['top'] ='Top';

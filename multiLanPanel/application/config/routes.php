@@ -53,11 +53,11 @@ $route['default_controller'] = 'main';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['marathi'] = 'main/marathi';
+$route['chinese'] = 'main/marathi';
 $route['english'] = 'main';
 
 $route['accesstoadmin'] = 'admin/admin_login';
 $route['dashboard'] = 'admin/adminValidation';
 $route['page'] = 'service/page';
 $route['logout'] = 'service/logout';
-$route['logout'] = 'admin/login';
+

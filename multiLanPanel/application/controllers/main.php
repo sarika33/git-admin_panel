@@ -2,11 +2,12 @@
 class Main extends CI_Controller{
 
 	public function index(){
-		$this->load->view('panel/landing_page');
+		$this->lang->load('en','en');
+		$this->load->view('panel/l');
 
 	}
 	public function marathi(){
-		/*$this->load->view('panel/landing_page_marathi');*/
+		
 		$this->lang->load('mr','mr');
 		$this->load->view('panel/l');
 
